@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question 1 text goes here" />
+
+            <CheckBox
+                android:id="@+id/chkbxAnswer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="answer 1"
+                android:textAlignment="viewStart" />
+
+            <CheckBox
+                android:id="@+id/chkbxAnswer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="answer 1"
+                android:textAlignment="viewStart" />
+
+            <CheckBox
+                android:id="@+id/chkbxAnswer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="answer 1"
+                android:textAlignment="viewStart" />
+
+            <CheckBox
+                android:id="@+id/chkbxAnswer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="answer 1"
+                android:textAlignment="viewStart" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
