@@ -64,6 +64,14 @@
         android:layout_margin="3dp"
         android:layout_weight="1"
         android:text="reset"
+        app:layout_constraintBottom_toTopOf="@id/btnAnalyze" />
+    <Button
+        android:id="@+id/btnAnalyze"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_weight="1"
+        android:text="AnalyzeResul"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
