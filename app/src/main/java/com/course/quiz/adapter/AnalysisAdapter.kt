@@ -17,7 +17,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class AnalysisAdapter(
-    private val dataSet: List<AnalyzeQuestion>,
+    private val dataSet: List<Question>,
     private val questionAnswersRepository: QuestionAnswersRepository
 ) :
     RecyclerView.Adapter<AnalysisAdapter.ViewHolder>() {
@@ -44,22 +44,23 @@ class AnalysisAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder) {
 
-            with(dataSet[position]) {
-                binding.tvQuestion.text = this.questionText
-                CoroutineScope(Dispatchers.IO).launch {
+            with(dataSet[holder.adapterPosition]) {
+                binding.tvQuestion.text = "${this.questionNo})  ${this.questionText}"
+                binding.tvCorrectAnswer.text="Correct Answer"
+                binding.tvUserAnswer.text  ="Your Answer"
                     var correcAnser =
-                        questionAnswersRepository.getCorrectAnswerByQuestNo(dataSet[position].questionNo)
+                        questionAnswersRepository.getCorrectAnswerByQuestNo(dataSet[holder.adapterPosition].questionNo)
                     correcAnser.forEach() {
-                        binding.tvCorrectAnswer.text = it.answerText
+                        binding.tvCorrectAnswer.text  = binding.tvCorrectAnswer.text.toString() +"\n"  + it.answerText
                     }
 
                     var userAnswer =
-                        questionAnswersRepository.getUserAnswerByQuestNo(dataSet[position].questionNo)
-                    correcAnser.forEach() {
-                        binding.tvUserAnswer.text = it.answerText
+                        questionAnswersRepository.getUserAnswerByQuestNo(dataSet[holder.adapterPosition ].questionNo)
+                    userAnswer.forEach() {
+                        binding.tvUserAnswer.text  = binding.tvUserAnswer.text.toString()+"\n" + it.answerText
                     }
 
-                }
+
 
 
             }

@@ -183,7 +183,7 @@ abstract class QuizDatabase : RoomDatabase() {
             ),
             QuestionAnswers(
                 3,
-                "final", false, true
+                "final", false, false
             ),
             QuestionAnswers(
                 3,
@@ -226,8 +226,8 @@ abstract class QuizDatabase : RoomDatabase() {
                 5,
                 "Headlines ()", false, true
             ),
-            QuestionAnswers(6, "JCM", false, true),
-            QuestionAnswers(6, "JVM", false, false),
+            QuestionAnswers(6, "JCM", false, false),
+            QuestionAnswers(6, "JVM", false, true),
             QuestionAnswers(6, "JPM", false, false),
             QuestionAnswers(6, "JDM", false, false),
             QuestionAnswers(7, "value my_var: Char", false, false),

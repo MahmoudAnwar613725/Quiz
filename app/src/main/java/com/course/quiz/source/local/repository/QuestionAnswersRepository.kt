@@ -42,7 +42,7 @@ class QuestionAnswersRepository(private val questionAnswersDao: QuestionAnswersD
     }
 
 
-    fun getAllAnswer() : List<AnalyzeQuestion>  {
+    fun getAllAnswer() : List<Question>  {
 
         return      questionAnswersDao.getAllAnswers()
 

@@ -13,8 +13,8 @@ interface QuestionAnswersDao {
     @Insert
     fun insert(questionAnswers: List<QuestionAnswers>)
 
-    @Query("select distinct questionTable.questionNo,questionTable.questionText,answerText   from questionAnswerTable join questionTable on questionTable.questionNo = questionAnswerTable.questionNo ")
-    fun getAllAnswers(): List<AnalyzeQuestion>
+    @Query("select distinct  *    from   questionTable  ")
+    fun getAllAnswers(): List<Question>
 
     @Query("Select * from questionAnswerTable where questionNo = :questNo")
     fun getAnswerByQuestion(questNo: Int): List<QuestionAnswers>
